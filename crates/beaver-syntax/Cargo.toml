@@ -1,0 +1,10 @@
+[package]
+name = "beaver-syntax"
+description = "Beaver lexer, parser, AST and formatter"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+beaver-source.workspace = true

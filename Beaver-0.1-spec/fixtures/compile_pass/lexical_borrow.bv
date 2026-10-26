@@ -1,0 +1,9 @@
+fn main():
+    var n = 10
+    scope:
+        let read = view n
+        print(read)
+    scope:
+        let write = edit n
+        write += 10
+    print(n)

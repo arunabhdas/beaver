@@ -1,0 +1,12 @@
+pub type Point:
+    x: Int
+    y: Int
+
+pub fn square(value: Int) -> Int:
+    return value * value
+
+pub fn translate_x(point: edit Point, delta: Int):
+    point.x += delta
+
+fn hidden_double(value: Int) -> Int:
+    return value + value

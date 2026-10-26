@@ -1,0 +1,11 @@
+fn divide(x: Int, y: Int) -> Result[Int]:
+    if y == 0:
+        return fail("division by zero")
+    return ok(x / y)
+
+fn compute() -> Result[Int]:
+    let x = try divide(20, 4)
+    return ok(x + 1)
+
+fn main():
+    print(unwrap(compute()))

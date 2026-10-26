@@ -1,0 +1,17 @@
+const LIMIT: Int = 10
+const DOUBLE: Int = LIMIT * 2 + 1
+const RATE: Float = 0.5
+const ON: Bool = not false and LIMIT > 3
+const NAME: String = "Beaver"
+pub const MIN: Int = -9223372036854775807 - 1
+
+fn main():
+    print(DOUBLE)
+    print(RATE * 4.0)
+    print(ON)
+    print(NAME + "!")
+    print(MIN)
+    var n = 0
+    for i in range(0, LIMIT):
+        n += i
+    print(n)

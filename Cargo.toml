@@ -1,0 +1,28 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/beaver-source",
+    "crates/beaver-syntax",
+    "crates/beaver-sema",
+    "crates/beaver-mir",
+    "crates/beaver-codegen-c",
+    "crates/beaver-package",
+    "crates/beaver-cli",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+rust-version = "1.80"
+
+[workspace.dependencies]
+beaver-source = { path = "crates/beaver-source" }
+beaver-syntax = { path = "crates/beaver-syntax" }
+beaver-sema = { path = "crates/beaver-sema" }
+beaver-mir = { path = "crates/beaver-mir" }
+beaver-codegen-c = { path = "crates/beaver-codegen-c" }
+beaver-package = { path = "crates/beaver-package" }
+
+[profile.release]
+debug = false

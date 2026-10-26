@@ -1,0 +1,3 @@
+fn main():
+    let z = 0.0
+    print(Int(z / z))

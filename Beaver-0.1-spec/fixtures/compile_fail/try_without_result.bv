@@ -1,0 +1,6 @@
+fn helper() -> Result[Int]:
+    return ok(1)
+
+fn main():
+    let n = try helper()
+    print(n)

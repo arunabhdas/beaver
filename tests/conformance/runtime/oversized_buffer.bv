@@ -1,0 +1,4 @@
+fn main():
+    print("allocating")
+    let b = Buffer(size=4611686018427387904)
+    print(len(b))

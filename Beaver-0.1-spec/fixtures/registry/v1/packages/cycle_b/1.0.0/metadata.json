@@ -1,0 +1,10 @@
+{
+  "archive_size": 271,
+  "dependencies": {
+    "cycle_a": "1.0.0"
+  },
+  "name": "cycle_b",
+  "schema": 1,
+  "sha256": "a6303eec9384c62346cc29e13555bdeeb4330b29545f1b8838ec67cb6d3ae614",
+  "version": "1.0.0"
+}

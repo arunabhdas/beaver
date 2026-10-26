@@ -1,0 +1,4 @@
+fn main():
+    let names = ["a"]
+    for n in names:
+        let stolen = take names

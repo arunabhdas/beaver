@@ -1,0 +1,4 @@
+fn main():
+    var names = ["hello", "world"]
+    let other = clone(names)
+    print(other[0])

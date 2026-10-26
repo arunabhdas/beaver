@@ -1,0 +1,18 @@
+fn main():
+    let a = 1.5
+    let b = 2.25
+    print(a + b)
+    print(a * b)
+    print(b / a)
+    print(-a)
+    print(0.1 + 0.2)
+    print(3.0)
+    print(Float(7))
+    print(Int(9.99))
+    print(Int(-9.99))
+    print(1.0 / 0.0)
+    print(a < b)
+    print(Float(1) == 1.0)
+    var f = 10.0
+    f /= 4.0
+    print(f)

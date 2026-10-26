@@ -1,0 +1,11 @@
+type Point:
+    x: Int
+    y: Int
+
+fn translate(p: edit Point, dx: Int):
+    p.x += dx
+
+fn main():
+    var p = Point(x=1, y=2)
+    translate(edit p, 4)
+    print(p.x)

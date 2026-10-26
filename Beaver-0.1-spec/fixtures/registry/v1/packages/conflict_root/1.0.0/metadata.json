@@ -1,0 +1,11 @@
+{
+  "archive_size": 287,
+  "dependencies": {
+    "requires_a": "1.0.0",
+    "requires_b": "1.0.0"
+  },
+  "name": "conflict_root",
+  "schema": 1,
+  "sha256": "57374fe278f529d26f8a24bd9b229153610ba62227b5578d8cf989ea65a1d095",
+  "version": "1.0.0"
+}

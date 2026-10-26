@@ -1,0 +1,4 @@
+use lib
+
+test "square":
+    assert_eq(lib.square(5), 25)

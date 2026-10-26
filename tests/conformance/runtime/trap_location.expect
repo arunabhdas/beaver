@@ -1,0 +1,2 @@
+exit=nonzero
+stderr=src/main.bv:4:

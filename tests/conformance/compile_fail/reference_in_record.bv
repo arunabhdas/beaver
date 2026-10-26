@@ -1,0 +1,7 @@
+type Box:
+    value: Int
+
+fn main():
+    let n = 3
+    let r = view n
+    let b = Box(value=r)

@@ -1,0 +1,2 @@
+fn main():
+    let r = fail("x")

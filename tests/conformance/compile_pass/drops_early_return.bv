@@ -1,0 +1,22 @@
+# Owned values in nested scopes are released on every early return.
+fn pick(flag: Int) -> String:
+    let a = "alpha" + "!"
+    var names: List[String] = ["x", "y"]
+    if flag == 0:
+        return take a
+    scope:
+        let b = clone(a)
+        if flag == 1:
+            return b + "?"
+        append(edit names, take b)
+    for i in range(0, 3):
+        let tmp = "loop" + "ing"
+        if i == flag:
+            return take tmp
+    return names[2] + a
+
+fn main():
+    print(pick(0))
+    print(pick(1))
+    print(pick(2))
+    print(pick(9))

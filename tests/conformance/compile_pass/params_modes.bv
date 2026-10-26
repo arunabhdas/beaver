@@ -1,0 +1,46 @@
+type Counter:
+    hits: Int
+    log: List[String]
+
+fn bump(n: edit Int):
+    n += 1
+
+fn bump_twice(n: edit Int):
+    bump(edit n)
+    bump(edit n)
+
+fn record(c: edit Counter, what: String):
+    c.hits += 1
+    append(edit c.log, clone(what))
+
+fn total(values: List[Int]) -> Int:
+    var s = 0
+    for v in values:
+        s += v
+    return s
+
+fn first(values: view List[Int]) -> Int:
+    return values[0]
+
+fn shout(s: take String) -> String:
+    return s + "!"
+
+fn main():
+    var x = 1
+    bump(edit x)
+    bump_twice(edit x)
+    print(x)
+    var c = Counter(hits=0, log=[])
+    record(edit c, "a")
+    let label = "b"
+    record(edit c, label)
+    print(c.hits)
+    print(c.log[1])
+    print(label)
+    let nums = [1, 2, 3]
+    print(total(nums))
+    print(first(view nums))
+    print(total([10, 20]))
+    let s = shout(take label)
+    print(s)
+    print(shout("hey"))

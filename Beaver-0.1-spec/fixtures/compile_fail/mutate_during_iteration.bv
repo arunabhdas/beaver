@@ -1,0 +1,4 @@
+fn main():
+    var values = [1, 2]
+    for value in values:
+        append(edit values, 3)

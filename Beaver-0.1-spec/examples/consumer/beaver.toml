@@ -1,0 +1,9 @@
+[package]
+name = "consumer"
+version = "0.1.0"
+edition = "2026"
+kind = "bin"
+entry = "src/main.bv"
+
+[dependencies]
+mathkit = { version = "1.0.0" }

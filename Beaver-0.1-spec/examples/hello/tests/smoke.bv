@@ -1,0 +1,5 @@
+test "integer addition":
+    assert_eq(2 + 2, 4)
+
+test "boolean comparison":
+    assert(3 > 2 and true)

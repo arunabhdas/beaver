@@ -1,0 +1,4 @@
+fn main():
+    let a = "hello"
+    let b = clone(a)
+    print(a + b)

@@ -1,0 +1,14 @@
+fn noisy(tag: String, value: Bool) -> Bool:
+    print(tag)
+    return value
+
+fn main():
+    let s = "abc"
+    if noisy("left", false) and (s + "d" == "abcd"):
+        print("wrong")
+    if noisy("left2", true) or noisy("never", true):
+        print("or ok")
+    if noisy("l3", true) and (s + "d" == "abcd"):
+        print("and ok")
+    let b = not (1 > 2) and true
+    print(b)

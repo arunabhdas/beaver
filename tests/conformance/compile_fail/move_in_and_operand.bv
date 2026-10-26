@@ -1,0 +1,6 @@
+fn eat(s: take String) -> Bool:
+    return true
+
+fn main():
+    let s = "x"
+    let ok = false and eat(take s)

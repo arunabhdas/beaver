@@ -1,0 +1,51 @@
+# Beaver 0.1 surface grammar (informative EBNF)
+# NEWLINE / INDENT / DEDENT emitted by indentation-aware lexer.
+# Parsing rules must also enforce the semantic restrictions in docs/02_LANGUAGE_SPEC.md.
+
+source         = { NEWLINE | use_decl | const_decl | type_decl | fn_decl | test_decl } EOF ;
+visibility     = [ "pub" ] ;
+use_decl       = "use" path NEWLINE ;
+path           = IDENT { "." IDENT } ;
+const_decl     = visibility "const" IDENT ":" type_expr "=" expr NEWLINE ;
+type_decl      = visibility "type" IDENT ":" NEWLINE INDENT field_decl { field_decl } DEDENT ;
+field_decl     = IDENT ":" type_expr NEWLINE ;
+fn_decl        = visibility "fn" IDENT "(" [ param { "," param } ] ")"
+                 [ "->" type_expr ] ":" suite ;
+param          = IDENT ":" [ "view" | "edit" | "take" ] type_expr ;
+test_decl      = "test" STRING ":" suite ;
+type_expr      = type_path [ "[" type_expr "]" ] ;
+type_path      = path ;
+suite          = NEWLINE INDENT { stmt | NEWLINE } DEDENT ;
+stmt           = binding | assign | return_stmt | if_stmt | while_stmt
+               | for_stmt | loop_ctrl | scope_stmt | "pass" NEWLINE
+               | expr NEWLINE ;
+binding        = ("let" | "var") IDENT [ ":" type_expr ] "=" expr NEWLINE ;
+assign         = place ("=" | "+=" | "-=" | "*=" | "/=") expr NEWLINE ;
+return_stmt    = "return" [ expr ] NEWLINE ;
+if_stmt        = "if" expr ":" suite { "elif" expr ":" suite }
+                 [ "else" ":" suite ] ;
+while_stmt     = "while" expr ":" suite ;
+for_stmt       = "for" IDENT "in" expr ":" suite ;
+loop_ctrl      = ("break" | "continue") NEWLINE ;
+scope_stmt     = "scope" ":" suite ;
+place          = IDENT { "." IDENT | "[" expr "]" } ;
+expr           = or_expr ;
+or_expr        = and_expr { "or" and_expr } ;
+and_expr       = compare_expr { "and" compare_expr } ;
+compare_expr   = additive [ compare_op additive ] ;
+compare_op     = "==" | "!=" | "<" | "<=" | ">" | ">=" ;
+additive       = multiplicative { ("+" | "-") multiplicative } ;
+multiplicative = unary { ("*" | "/" | "%") unary } ;
+unary          = ("not" | "-" | "view" | "edit" | "take" | "try") unary
+               | postfix ;
+postfix        = primary { "." IDENT | "[" expr "]"
+                 | "(" [ arg { "," arg } ] ")" } ;
+arg            = [ IDENT "=" ] expr ;
+primary        = INT | FLOAT | STRING | "true" | "false" | IDENT
+               | "(" expr ")" | "[" [ expr { "," expr } ] "]" ;
+
+# Type_expr is restricted to List[T], Result[T], named types, and built-ins;
+# IDENT as callee may be a built-in such as ok, fail, Buffer, or Byte.
+# "range" is a builtin function, not a general expression iterator type.
+# No chained comparisons; lexer handles INT/FLOAT and string escapes.
+# Test declarations are valid only under tests/*.bv.

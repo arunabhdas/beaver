@@ -1,0 +1,22 @@
+type Acc:
+    total: Int
+    avg: Float
+
+fn main():
+    var a = Acc(total=0, avg=0.0)
+    var xs = [1, 2, 3]
+    for i in range(0, len(xs)):
+        a.total += xs[i]
+        xs[i] *= 2
+    a.avg += 1.5
+    a.avg *= 2.0
+    var n = 100
+    n -= 1
+    n /= 2
+    print(a.total)
+    print(a.avg)
+    print(xs[2])
+    print(n)
+    print(-7 / 2)
+    print(-7 % 2)
+    print(7 % -3)

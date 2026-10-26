@@ -1,0 +1,9 @@
+[package]
+name = "beaver-source"
+description = "Beaver source manager, spans and structured diagnostics"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]

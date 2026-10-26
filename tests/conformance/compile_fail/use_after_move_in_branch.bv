@@ -1,0 +1,5 @@
+fn main():
+    let s = "x"
+    let t = take s
+    if len(s) > 0:
+        print("no")

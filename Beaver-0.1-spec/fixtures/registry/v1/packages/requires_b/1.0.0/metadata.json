@@ -1,0 +1,10 @@
+{
+  "archive_size": 278,
+  "dependencies": {
+    "mathkit": "2.0.0"
+  },
+  "name": "requires_b",
+  "schema": 1,
+  "sha256": "fcad0bd1f27c7510738aa3f7e8c6224876fd365aab09e6c91e9a5e0e55598ea0",
+  "version": "1.0.0"
+}

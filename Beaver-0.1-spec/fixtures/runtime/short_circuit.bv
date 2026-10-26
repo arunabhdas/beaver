@@ -1,0 +1,9 @@
+fn panic_if_called() -> Bool:
+    assert(false)
+    return true
+
+fn main():
+    if false and panic_if_called():
+        print("bad")
+    else:
+        print("safe")

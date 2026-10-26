@@ -1,0 +1,5 @@
+fn print(x: Int):
+    pass
+
+fn main():
+    pass

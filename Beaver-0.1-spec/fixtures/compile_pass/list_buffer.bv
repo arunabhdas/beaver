@@ -1,0 +1,7 @@
+fn main():
+    var data = Buffer(size=8)
+    data[2] = Byte(42)
+    print(data[2])
+    var values: List[Int] = []
+    append(edit values, 5)
+    print(values[0])

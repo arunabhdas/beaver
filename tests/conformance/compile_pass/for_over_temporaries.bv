@@ -1,0 +1,19 @@
+fn make(n: Int) -> List[String]:
+    var out: List[String] = []
+    for i in range(0, n):
+        append(edit out, "v" + "!")
+    return take out
+
+fn main():
+    var count = 0
+    for s in make(3):
+        count += len(s)
+    print(count)
+    for s in make(4):
+        if len(s) == 2:
+            break
+    let names = ["a", "b"]
+    for n in take names:
+        print(n)
+    for v in [7, 8]:
+        print(v)

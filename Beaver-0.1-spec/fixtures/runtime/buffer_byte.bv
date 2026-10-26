@@ -1,0 +1,4 @@
+fn main():
+    var b = Buffer(size=4)
+    b[0] = Byte(65)
+    print(b[0])

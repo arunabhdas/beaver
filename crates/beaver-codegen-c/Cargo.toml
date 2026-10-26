@@ -1,0 +1,15 @@
+[package]
+name = "beaver-codegen-c"
+description = "Beaver C11 backend and host C compiler driver"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+beaver-source.workspace = true
+beaver-sema.workspace = true
+beaver-mir.workspace = true
+
+[dev-dependencies]
+tempfile = "=3.27.0"

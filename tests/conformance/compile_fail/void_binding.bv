@@ -1,0 +1,5 @@
+fn nothing():
+    pass
+
+fn main():
+    let x = nothing()

@@ -1,0 +1,7 @@
+/target/
+**/target/
+*.tmp
+.DS_Store
+DOC1.md
+DOC2.md
+

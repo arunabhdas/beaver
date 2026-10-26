@@ -1,0 +1,6 @@
+fn both(a: edit String, b: String):
+    print(b)
+
+fn main():
+    var s = "x"
+    both(edit s, s)

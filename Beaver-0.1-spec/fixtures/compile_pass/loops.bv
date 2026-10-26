@@ -1,0 +1,7 @@
+fn main():
+    var total = 0
+    for n in range(0, 5):
+        if n == 3:
+            continue
+        total += n
+    print(total)

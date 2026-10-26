@@ -1,0 +1,8 @@
+[package]
+name = "mathkit"
+version = "1.0.0"
+edition = "2026"
+kind = "lib"
+entry = "src/lib.bv"
+
+[dependencies]

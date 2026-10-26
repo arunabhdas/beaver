@@ -1,0 +1,4 @@
+use mathkit
+
+test "third party library":
+    assert_eq(mathkit.square(6), 36)

@@ -1,0 +1,5 @@
+fn same(v: view Int) -> Int:
+    return v
+
+fn main():
+    print(same(1))

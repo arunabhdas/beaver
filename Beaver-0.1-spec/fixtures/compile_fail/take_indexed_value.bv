@@ -1,0 +1,3 @@
+fn main():
+    var names = ["a", "b"]
+    let one = take names[0]

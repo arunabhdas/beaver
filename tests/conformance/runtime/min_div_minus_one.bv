@@ -1,0 +1,4 @@
+fn main():
+    let min = -9223372036854775807 - 1
+    let d = 0 - 1
+    print(min / d)

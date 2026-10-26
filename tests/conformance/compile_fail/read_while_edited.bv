@@ -1,0 +1,5 @@
+fn main():
+    var n = 1
+    let w = edit n
+    print(n)
+    w = 2

@@ -1,0 +1,42 @@
+type Address:
+    city: String
+    zip: Int
+
+type Person:
+    name: String
+    age: Int
+    home: Address
+    tags: List[String]
+
+type Point:
+    x: Int
+    y: Int
+
+fn birthday(p: edit Person):
+    p.age += 1
+    append(edit p.tags, "older")
+
+fn describe(p: Person) -> String:
+    return p.name + " from " + p.home.city
+
+fn main():
+    var ada = Person(age=36, name="Ada", tags=[], home=Address(zip=1815, city="London"))
+    birthday(edit ada)
+    print(ada.age)
+    print(describe(ada))
+    let copy = clone(ada)
+    ada.home.city = "Paris"
+    print(copy.home.city)
+    print(ada.home.city)
+    print(len(copy.tags))
+    let p = Point(x=1, y=2)
+    var q = p
+    q.x = 10
+    print(p.x)
+    print(q.x)
+    print(p == Point(y=2, x=1))
+    print(p != q)
+    let a1 = Address(city="Oslo", zip=1)
+    let a2 = Address(city="Oslo", zip=1)
+    print(a1 == a2)
+    assert_eq(a1, a2)

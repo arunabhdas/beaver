@@ -1,0 +1,8 @@
+type Secret:
+    v: Int
+
+pub fn leak() -> Secret:
+    return Secret(v=1)
+
+fn main():
+    pass

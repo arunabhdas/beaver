@@ -1,0 +1,4 @@
+fn main():
+    let name = "hello"
+    let another = take name
+    print(name)

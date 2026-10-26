@@ -1,0 +1,6 @@
+use mathkit
+
+fn main():
+    var point = mathkit.Point(x=2, y=7)
+    mathkit.translate_x(edit point, 5)
+    print(mathkit.square(point.x))

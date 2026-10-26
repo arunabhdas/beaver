@@ -1,0 +1,23 @@
+fn find(values: List[Int], target: Int) -> Int:
+    var i = 0
+    while true:
+        if i >= len(values):
+            return -1
+        if values[i] == target:
+            return i
+        i += 1
+
+fn classify(n: Int) -> String:
+    if n < 0:
+        return "negative"
+    elif n == 0:
+        return "zero"
+    else:
+        return "positive"
+
+fn main():
+    print(find([5, 6, 7], 7))
+    print(find([5, 6, 7], 8))
+    print(classify(-3))
+    print(classify(0))
+    print(classify(8))

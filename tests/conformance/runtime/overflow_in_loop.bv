@@ -1,0 +1,4 @@
+fn main():
+    var f = 1
+    for i in range(1, 30):
+        f *= i

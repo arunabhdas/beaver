@@ -1,0 +1,3 @@
+exit=nonzero
+stdout=allocating
+stderr=B5007

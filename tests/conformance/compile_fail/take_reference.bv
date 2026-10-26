@@ -1,0 +1,4 @@
+fn main():
+    let s = "abc"
+    let r = view s
+    let owned = take r

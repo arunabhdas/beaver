@@ -1,0 +1,14 @@
+fn inner() -> Result[Int]:
+    return fail("bad input")
+
+fn outer() -> Result[Int]:
+    let n = try inner()
+    return ok(n)
+
+fn main():
+    let result = outer()
+    if is_ok(result):
+        print("unexpected")
+    else:
+        let message = unwrap_error(take result)
+        print(message)

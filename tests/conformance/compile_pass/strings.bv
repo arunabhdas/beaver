@@ -1,0 +1,17 @@
+const GREETING: String = "hi"
+
+fn main():
+    let s = "naïve"
+    print(len(s))
+    let joined = s + " " + GREETING + "!"
+    print(joined)
+    print(joined == "naïve hi!")
+    print("tab\there")
+    print("quote \" and backslash \\")
+    print("snow \u{2603}")
+    let empty = ""
+    print(len(empty))
+    print(empty == "")
+    let z = "a\0b"
+    print(len(z))
+    print(clone(joined) != joined)

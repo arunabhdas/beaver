@@ -1,0 +1,48 @@
+fn parse_digit(c: Int) -> Result[Int]:
+    if c < 0 or c > 9:
+        return fail("digit out of range: " + "bad")
+    return ok(c)
+
+fn sum3(a: Int, b: Int, c: Int) -> Result[Int]:
+    let x = try parse_digit(a)
+    let y = try parse_digit(b)
+    let z = try parse_digit(c)
+    return ok(x + y + z)
+
+fn names(n: Int) -> Result[List[String]]:
+    var out: List[String] = []
+    for i in range(0, n):
+        let r = parse_digit(i)
+        let v = try r_take(take r)
+        append(edit out, "n" + "_")
+        if v > 100:
+            return fail("impossible")
+    return ok(take out)
+
+fn r_take(r: take Result[Int]) -> Result[Int]:
+    return take r
+
+fn check(flag: Bool) -> Result[Void]:
+    if flag:
+        return fail("check failed")
+    return ok()
+
+fn run_all() -> Result[String]:
+    let label = "label" + ":"
+    try check(false)
+    let list = try names(3)
+    let total = try sum3(1, 2, 3)
+    print(total)
+    print(len(list))
+    try check(true)
+    return ok(take label)
+
+fn main():
+    print(unwrap(sum3(1, 2, 3)))
+    let bad = sum3(1, 42, 3)
+    print(is_ok(bad))
+    print(unwrap_error(take bad))
+    let outcome = run_all()
+    print(unwrap_error(take outcome))
+    unwrap(check(false))
+    print(len(unwrap(names(4))))

@@ -1,0 +1,19 @@
+# A value moved on only one branch is accepted when it is never used again;
+# it is dropped on the other branch.
+fn consume(s: take String):
+    print(s)
+
+fn main():
+    var n = 0
+    while n < 3:
+        let word = "w" + "ord"
+        if n == 1:
+            consume(take word)
+        else:
+            print("kept")
+        n += 1
+    let result: Result[String] = ok("value")
+    if is_ok(result):
+        print(unwrap(take result))
+    else:
+        print("no")

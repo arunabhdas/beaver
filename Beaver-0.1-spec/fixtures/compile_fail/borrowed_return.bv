@@ -1,0 +1,7 @@
+fn bad() -> String:
+    let value = "hello"
+    let alias = view value
+    return alias
+
+fn main():
+    print("test")

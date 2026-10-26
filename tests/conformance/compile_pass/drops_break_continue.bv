@@ -1,0 +1,24 @@
+# Loop-body owners are released on break, continue and fallthrough.
+fn main():
+    var kept: List[String] = []
+    var i = 0
+    while true:
+        i += 1
+        let label = "item" + "-"
+        var parts: List[String] = [clone(label)]
+        if i % 2 == 0:
+            continue
+        if i > 7:
+            break
+        append(edit parts, "odd")
+        append(edit kept, take label)
+    print(len(kept))
+    for s in kept:
+        print(s)
+    for n in range(0, 10):
+        let t = "t" + "x"
+        if n == 2:
+            break
+        if n == 0:
+            continue
+        print(t)

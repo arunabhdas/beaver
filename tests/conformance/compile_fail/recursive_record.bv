@@ -1,0 +1,6 @@
+type Node:
+    value: Int
+    next: Node
+
+fn main():
+    pass

@@ -1,0 +1,7 @@
+fn consume(s: take String):
+    print(s)
+
+fn main():
+    let s = "once"
+    for i in range(0, 3):
+        consume(take s)

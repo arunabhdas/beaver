@@ -1,0 +1,20 @@
+fn consume(s: take String) -> Int:
+    return len(s)
+
+fn main():
+    let outer = "outer value"
+    var total = 0
+    for i in range(0, 5):
+        if i == 3:
+            total += consume(take outer)
+            break
+        total += 1
+    print(total)
+    let other = "abc"
+    var j = 0
+    while j < 10:
+        j += 1
+        if j == 4:
+            print(consume(take other))
+            break
+    print(j)

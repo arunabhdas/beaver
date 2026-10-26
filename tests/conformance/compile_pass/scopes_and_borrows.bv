@@ -1,0 +1,26 @@
+fn main():
+    var total = 0
+    var data = [1, 2, 3]
+    scope:
+        let r1 = view data
+        let r2 = view data
+        print(len(r1) + len(r2))
+    scope:
+        let w = edit data
+        append(edit w, 4)
+        w[0] = 100
+    print(data[0])
+    print(len(data))
+    for v in data:
+        total += v
+    print(total)
+    var n = 5
+    scope:
+        let e = edit n
+        e = e * 2
+    print(n)
+    let name = "shadow"
+    scope:
+        let name = "inner"
+        print(name)
+    print(name)

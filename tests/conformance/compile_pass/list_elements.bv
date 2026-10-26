@@ -1,0 +1,27 @@
+type Item:
+    name: String
+    count: Int
+
+fn main():
+    var items: List[Item] = [Item(name="a", count=1)]
+    append(edit items, Item(name="b", count=2))
+    items[0].count += 10
+    items[1].name = "bee"
+    items[0] = Item(name="replaced", count=0)
+    for it in items:
+        print(it.name)
+        print(it.count)
+    var words = ["one", "two", "three"]
+    words[1] = "TWO"
+    print(words[1])
+    print(len(words[2]))
+    var grid: List[List[Int]] = [[1, 2], [3]]
+    append(edit grid[1], 4)
+    grid[0][1] = 20
+    var sum = 0
+    for row in grid:
+        for v in row:
+            sum += v
+    print(sum)
+    let deep = clone(grid)
+    print(deep[1][1])

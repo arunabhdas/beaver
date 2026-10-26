@@ -1,0 +1,5 @@
+fn main():
+    var number = 1
+    let reader = view number
+    let writer = edit number
+    print(reader)

@@ -1,0 +1,19 @@
+fn main():
+    let b = Byte(200)
+    let c = Byte(55)
+    print(b)
+    print(b > c)
+    print(Int(b) + Int(c))
+    print(Byte(Int(b) - 100))
+    print(b == Byte(200))
+    var buf = Buffer(size=3)
+    buf[0] = b
+    buf[2] = c
+    var total = 0
+    for i in range(0, len(buf)):
+        total += Int(buf[i])
+    print(total)
+    let copy = clone(buf)
+    buf[0] = Byte(1)
+    print(copy[0])
+    print(len(copy))

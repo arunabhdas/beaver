@@ -1,0 +1,5 @@
+fn main():
+    var xs = [1]
+    let first = view xs
+    print(len(first))
+    append(edit xs, 2)

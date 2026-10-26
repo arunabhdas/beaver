@@ -1,0 +1,5 @@
+fn bad() -> Result[Int]:
+    return fail("broken")
+
+fn main():
+    print(unwrap(bad()))

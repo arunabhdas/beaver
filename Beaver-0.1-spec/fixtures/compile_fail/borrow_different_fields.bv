@@ -1,0 +1,9 @@
+type Pair:
+    x: Int
+    y: Int
+
+fn main():
+    var pair = Pair(x=1, y=2)
+    let left = view pair.x
+    let right = edit pair.y
+    print(left)

@@ -1,0 +1,4 @@
+fn main():
+    var s = "x"
+    let t = take s
+    s = "y"

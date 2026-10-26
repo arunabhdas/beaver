@@ -1,0 +1,21 @@
+fn sum_from(values: List[Int], i: Int) -> Int:
+    if i >= len(values):
+        return 0
+    return values[i] + sum_from(values, i + 1)
+
+fn fib(n: Int) -> Int:
+    if n < 2:
+        return n
+    return fib(n - 1) + fib(n - 2)
+
+fn build(n: Int) -> List[String]:
+    if n == 0:
+        return []
+    var rest = build(n - 1)
+    append(edit rest, "x")
+    return take rest
+
+fn main():
+    print(sum_from([1, 2, 3, 4], 0))
+    print(fib(20))
+    print(len(build(5)))

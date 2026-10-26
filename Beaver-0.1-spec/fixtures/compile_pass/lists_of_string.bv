@@ -1,0 +1,6 @@
+fn main():
+    var names: List[String] = ["Alice", "Bob"]
+    let other = "Charlie"
+    append(edit names, take other)
+    for name in names:
+        print(name)

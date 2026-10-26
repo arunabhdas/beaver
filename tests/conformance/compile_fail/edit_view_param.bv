@@ -1,0 +1,5 @@
+fn grow(xs: List[Int]):
+    append(edit xs, 1)
+
+fn main():
+    grow([1])

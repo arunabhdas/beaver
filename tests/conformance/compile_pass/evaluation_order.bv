@@ -1,0 +1,22 @@
+fn trace(label: String, v: Int) -> Int:
+    print(label)
+    return v
+
+fn combine(a: Int, b: Int, c: Int) -> Int:
+    return a * 100 + b * 10 + c
+
+fn inc(n: edit Int) -> Int:
+    n += 1
+    return clone(n)
+
+fn main():
+    print(combine(trace("a", 1), trace("b", 2), trace("c", 3)))
+    print(trace("left", 2) - trace("right", 1))
+    var x = 1
+    let r = x + inc(edit x)
+    print(r)
+    print(x)
+    var calls = 0
+    for i in range(trace("start", 0), trace("end", 3)):
+        calls += 1
+    print(calls)

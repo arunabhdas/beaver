@@ -1,0 +1,3 @@
+fn main():
+    let n = 256
+    print(Byte(n))

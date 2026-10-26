@@ -1,0 +1,2 @@
+# Diagnostics are only built on error paths; returning them by value is fine.
+large-error-threshold = 256

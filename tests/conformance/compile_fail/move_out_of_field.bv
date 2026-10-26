@@ -1,0 +1,6 @@
+type Person:
+    name: String
+
+fn main():
+    let p = Person(name="a")
+    let n = take p.name

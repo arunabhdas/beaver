@@ -1,0 +1,4 @@
+fn main():
+    print("before")
+    assert(1 > 2)
+    print("after")

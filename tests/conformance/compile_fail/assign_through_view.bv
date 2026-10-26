@@ -1,0 +1,4 @@
+fn main():
+    var n = 1
+    let r = view n
+    r = 5

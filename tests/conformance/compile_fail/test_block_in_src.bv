@@ -1,0 +1,5 @@
+test "nope":
+    assert(true)
+
+fn main():
+    pass

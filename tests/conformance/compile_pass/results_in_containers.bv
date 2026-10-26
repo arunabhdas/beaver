@@ -1,0 +1,24 @@
+type Job:
+    id: Int
+    outcome: Result[String]
+
+fn attempt(n: Int) -> Result[String]:
+    if n % 2 == 0:
+        return ok("even")
+    return fail("odd " + "number")
+
+fn main():
+    var outcomes: List[Result[String]] = []
+    for i in range(0, 4):
+        append(edit outcomes, attempt(i))
+    var good = 0
+    for r in outcomes:
+        if is_ok(r):
+            good += 1
+    print(good)
+    let job = Job(id=7, outcome=attempt(3))
+    print(is_ok(job.outcome))
+    let copy = clone(outcomes)
+    print(len(copy))
+    let nested: Result[Result[Int]] = ok(ok(5))
+    print(unwrap(unwrap(take nested)))
